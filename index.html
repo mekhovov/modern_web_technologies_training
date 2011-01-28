@@ -1,0 +1,143 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+    <title>Home Works of WebUI course</title> 
+
+    <meta charset="UTF-8"> 
+		
+    <script src="js/jquery-1.4.4.js"></script>
+    <script src="js/jquery-ui-1.8.7.custom.min.js"></script>
+    
+    <script src="js/cmn.js"></script>
+    <script src="js/db_structure.js"></script>
+		<script src="js/db_migrate.js"></script>
+		<script src="js/model_news.js"></script>
+		<script src="js/view_cmn.js"></script>
+		<script src="js/view_news.js"></script>
+    <script src="js/db_cmn.js"></script>
+		<script src="js/drag_and_drop.js"></script> 
+  	<script src="js/controller_cmn.js"></script> 
+  	
+    <link rel="stylesheet" href="css/common.css"> 
+    
+</head> 
+<body> 
+	<section>
+
+		<!--  Header menu -->
+    <div id="header">
+	    <header>
+		    <nav>
+  		    <ul>
+  	  		  <li ><div class="title menu_home" onclick="show_menu('home');"><img src="images/ico-home.png" /><em>Home</em></div></li>
+      	    <li><div class="title article_all_news menu_all_news menu_add_news menu_html_news menu_css_news menu_other_news" onclick="show_menu('all_news', 'all_news');"><img src="images/ico-news.png" /><em>News</em></div></li>
+  					<li><div class="title menu_skeleton" onclick="show_menu('skeleton');"><img src="images/ico-skeleton.png" /><em>Skeleton</em></div></li>
+    			</ul>
+  			</nav>
+		  </header>
+	  </div>
+  </section>
+  
+  <section id="page">
+  		
+  	<!--  Logo line -->
+  	<section id="intro">
+  		<div class="line_up"></div>
+      <div id="logo_intro"><img src="images/logo_intro.png" /></div>
+			<header>
+        <hgroup>
+          <span class="h1">Presentation of </span>
+          <span class="h2">HTML5</span><span class="h0">, </span>
+          <span class="h2">CSS3</span><span class="h0">, </span>
+          <span class="h2">JS</span><span class="h0">, </span>
+          <span class="h2">jQuery</span><span class="h0">.</span>
+        </hgroup>
+			</header>
+    	<div class="line_down"></div>
+		</section>
+		
+		<!--  News aside -->
+    <aside class="article_all_news article_add_news article_html_news article_css_news article_other_news">
+      <div>
+	      <ul>
+          <li ><div class="aside_all_news" onclick="show_menu('all_news', 'all_news');"><span class="h4">* All News: <span class="news_count"></span></span></div></li>
+          <li ><div class="aside_html_news" onclick="show_menu('html_news');"><span class="h4">* HTML</span></div></li>
+          <li ><div class="aside_css_news" onclick="show_menu('css_news');"><span class="h4">* CSS</span></div></li>
+          <li ><div class="aside_other_news" onclick="show_menu('other_news');"><span class="h4">* Other</span></div></li>
+          <li ><div class="aside_add_news" onclick="show_menu('add_news');"><span class="h4">+ Add News</span></div></li>
+        </ul>
+     </div>
+    </aside>
+		
+    <!--  Skeleton aside -->
+    <aside class="article_skeleton">
+      <div>
+        <ul>
+          <li ><div class="aside_skeleton" ><span class="h4">* It`s SKELETON page </span></div></li>
+        </ul>
+      </div>
+    </aside>          
+          
+    <!--  Common content -->
+    <section id="content">
+
+    	<!--  Article home page -->	
+      <article class="article_home">
+        <header class="red_title">
+        	<img class="article-left" src="images/nav-left.png"/><img class="article-right" src="images/nav-right.png"/>
+          <h3><a href="#">Hello there!</a></h3>
+        </header>
+        <div class="article_content ">
+          <p><span class="h5">It`s <span class="h3">HOME</span> page !</span></p>
+          <p><span class="h5">There is home works of </span><span class="h6">Web UI</span><span class="h5"> course.</span></h2></p>
+          <br>
+          <div class="two_column h7">
+            <p>It`s some text for example. In this tutorial, we are creating a photo shoot effect with our just-released PhotoShoot jQuery plug-in. With it you can convert a regular div on the page into a photo shooting stage simulating a camera-like feel.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer luctus quam quis nibh fringilla sit amet consectetur lectus malesuada. Sed nec libero erat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc mi nisi, rhoncus ut vestibulum ac, sollicitudin quis lorem. Duis felis dui, vulputate nec adipiscing nec, interdum vel tortor. Sed gravida, erat nec rutrum tincidunt, metus mauris imperdiet nunc, et elementum tortor nunc at eros. Donec malesuada congue molestie. Suspendisse potenti. Vestibulum cursus congue sem et feugiat. Morbi quis elit odio. </p>
+            <br>
+          </div>
+        </div>
+		  </article>
+      
+      <!--  Article skeleton page -->	
+  		<article class="article_skeleton">
+        <header class="title">
+          <h3> Drag and Drop demonstration </h3>
+        </header>
+        <!--  Container gor Skeleton, Frank and Zombie -->	
+				<div id="skeletons_container">
+					<!--  Skeleton head, body, hands and foots -->	
+	        <div id="skeleton">
+	        	<div class="head"></div><div class="lhand"></div><div class="body"></div><div class="rhand"></div><div class="lfoot"></div><div class="rfoot"></div>
+        	</div>
+        	<!--  Frank head, body, hands and foots -->	
+        	<div id="frank">
+	        	<div class="head">
+	        		</div><div class="lhand"></div><div class="body"></div><div class="rhand"></div><div class="lfoot"></div><div class="rfoot"></div>
+	      	  </div>
+	      	  <!--  Zombie head, body, hands and foots -->	
+	          <div id="zombie">
+	          	<div class="head"></div><div class="lhand"></div><div class="body"></div><div class="rhand"></div><div class="lfoot"></div><div class="rfoot"></div>
+	          </div>
+	        </div>  
+	      </div>
+	      <!--  Output for additional info -->	
+		    <div id="res"></div>
+	      <div id="res1"></div>
+  		</article>
+			
+  			
+  	</section>
+  
+  	  
+  </section>
+  
+  <!--  footer -->	
+  <footer>
+    <div class="line_down"></div>
+    <p>&copy; 2011 - localhost.com</p>
+    <a href="mailto:alex.mehovov@gmail.com" title='send mail to me' class="send_mail"></a>
+    <a href="#" class="up" title="go up"></a>
+  </footer>
+</body> 
+</html> 
