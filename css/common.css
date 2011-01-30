@@ -384,14 +384,10 @@ article{
 	filter:alpha(opacity=80);
 	-moz-opacity: 0.80;
 	opacity: 0.80;
-<<<<<<< HEAD
 }
 
 .title >h3:first-letter , .red_title >h3:first-letter {
   text-transform: uppercase;
-=======
-	
->>>>>>> origin/master
 }
 
 .title > h3 {
@@ -900,7 +896,6 @@ margin:0 0 0 30px;
 	color: green;
 }
 
-<<<<<<< HEAD
 /* ********** CSS animations ******** */
 
 @-webkit-keyframes head_jump {
@@ -977,33 +972,15 @@ margin:0 0 0 30px;
 	-webkit-border-radius: 30px 30px 50px 50px;
 	border-radius: 30px 30px 50px 50px;
 	
-=======
-
-.active {
-	border: 1px dashed #ccc;
-
-}
-
-.hover {
-	opacity:0.3;
-  -moz-opacity: 0.3;
-  filter:alpha(opacity=30);
->>>>>>> origin/master
 }
 
 
 #skeletons_container {
-<<<<<<< HEAD
 		height:380px;
 }
 
 
 
-=======
-		height:320px;
-}
-
->>>>>>> origin/master
 #frank, #zombie, #skeleton, .head, .lhand, .body, .rhand, .lfoot, .rfoot {
 	position:absolute;
 }
@@ -1078,7 +1055,6 @@ margin:0 0 0 30px;
 
 #frank .head{
 	background: transparent url("../images/skeleton/f_head.png") no-repeat;
-<<<<<<< HEAD
 
 }
 #frank .lhand{
@@ -1095,17 +1071,6 @@ margin:0 0 0 30px;
 #frank .body{
 	background: transparent url("../images/skeleton/f_body.png") no-repeat;
 	top:82px;
-=======
-}
-#frank .lhand{
-	background: transparent url("../images/skeleton/f_lhand.png") no-repeat;
-}
-#frank .rhand{
-	background: transparent url("../images/skeleton/f_rhand.png") no-repeat;
-}
-#frank .body{
-	background: transparent url("../images/skeleton/f_body.png") no-repeat;
->>>>>>> origin/master
 }
 #frank .lfoot{
 	background: transparent url("../images/skeleton/f_lfoot.png") no-repeat;
@@ -1121,7 +1086,6 @@ margin:0 0 0 30px;
 }
 #zombie .lhand{
 	background: transparent url("../images/skeleton/z_lhand.png") no-repeat;
-<<<<<<< HEAD
 	top:60px;
 }
 #zombie .rhand{
@@ -1131,14 +1095,6 @@ margin:0 0 0 30px;
 #zombie .body{
 	background: transparent url("../images/skeleton/z_body.png") no-repeat;
 	top:82px;
-=======
-}
-#zombie .rhand{
-	background: transparent url("../images/skeleton/z_rhand.png") no-repeat;
-}
-#zombie .body{
-	background: transparent url("../images/skeleton/z_body.png") no-repeat;
->>>>>>> origin/master
 }
 #zombie .lfoot{
 	background: transparent url("../images/skeleton/z_lfoot.png") no-repeat;
@@ -1147,7 +1103,6 @@ margin:0 0 0 30px;
 	background: transparent url("../images/skeleton/z_rfoot.png") no-repeat;
 }
 
-<<<<<<< HEAD
 
 @-webkit-keyframes lets_rock {
  
@@ -1471,5 +1426,3 @@ margin:0 0 0 30px;
   100%  {	left:80px;  top:70px; -webkit-transform: rotate(100deg) scale(1.4);}
  
 }
-=======
->>>>>>> origin/master
