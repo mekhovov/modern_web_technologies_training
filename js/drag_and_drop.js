@@ -6,6 +6,67 @@
 
 $(document).ready(init);
 
+
+function animate(element, anim)
+{
+  $(element).css({'-webkit-animation' : ''});
+  window.setTimeout(function() {
+    $(element).delay(2000).css({'-webkit-animation' : anim});
+  }, 0  );
+};
+
+
+function lets_rock (){
+
+  $("#lets_rock .h0").hide();
+  $("#rock_mp3").append('<audio autoplay controls >  <source src="audio/StoneSour-30-30-150.mp3"> </audio>').fadeIn();
+  $("#frank").append('<div class="guitar"></div>');
+  $("#zombie").append('<div class="guitar"></div>');
+  
+  $("#skeleton").css({'top' : '150px'});
+  $("#frank").css({'top' : '150px'});
+  $("#zombie").css({'top' : '120px'});
+  $("#zombie").css({'left' : '50px'});
+  $("article.article_skeleton").css({'background' : 'transparent url("images/skeleton/wall.png") no-repeat'});
+ 
+  $("#skeleton .body").css({'left' : '300px', 'top' : '180px', 'z-index':'2'});
+  $("#skeleton .rhand").css({'left' : '360px', 'top' : '170px', 'z-index':'3'});
+  $("#skeleton .lhand").css({'left' : '230px', 'top' : '170px', 'z-index':'3'});
+  $("#skeleton .rfoot").css({'left' : '260px', 'top' :  '130px', 'z-index':'6', '-webkit-transform' : 'rotate(-83deg)'});
+  $("#skeleton .lfoot").css({'left' : '360px', 'top' : '130px', 'z-index':'6', '-webkit-transform' : 'rotate(83deg)'});
+  $("#frank .head").css({'left' : '310px', 'top' : '120px', 'z-index':'5'});
+  $("#zombie .head").css({'left' : '80px', 'top' : '10px'});
+  $("#frank .lhand").css({'left' : '10px', 'top' : '70px', 'z-index':'5', '-webkit-transform' : 'rotateX(180deg)'});
+  $("#frank .rhand").css({'left' : '140px', 'top' : '110px', 'z-index':'2'});
+  $("#zombie .lhand").css({'left' : '1px', 'top' : '80px', 'z-index':'5', '-webkit-transform' : 'rotateX(180deg)'});
+  $("#zombie .rhand").css({'left' : '120px', 'top' : '90px', 'z-index':'2'});
+  $("#frank .guitar").css({'left' : '80px', 'top' : '80px', 'z-index':'3', '-webkit-transform' : 'rotate(100deg) scale(1.4)', 'background' : 'transparent url("images/skeleton/s_rfoot.png") no-repeat', 'width' : '52px', 'height' : '120px', 'position' : 'absolute'});
+  $("#zombie .guitar").css({'left' : '80px', 'top' : '70px', 'z-index':'3', '-webkit-transform' : 'rotate(100deg) scale(1.4)', 'background' : 'transparent url("images/skeleton/s_rfoot.png") no-repeat', 'width' : '52px', 'height' : '120px', 'position' : 'absolute'});
+  $("#zombie .rfoot").css({'left' : '115px', 'top' :  '155px'});
+  $("#zombie .lfoot").css({'left' : '60px', 'top' : '155px'});
+  $("#frank .rfoot").css({'left' : '115px', 'top' :  '155px'});
+  $("#frank .lfoot").css({'left' : '60px', 'top' : '155px'});
+  
+  animate('#skeleton .rhand', 'rock_s_rhand 3s 83 ease-in-out');
+  animate('#skeleton .lhand', 'rock_s_lhand 3s 83 ease-in-out');
+  animate('#skeleton .rfoot', 'rock_s_rfoot 3s 83 ease-in-out');
+  animate('#skeleton .lfoot', 'rock_s_lfoot 3s 83 ease-in-out');
+  animate('#frank .head',     'rock_f_head 1.5s 166 ease-in-out');
+  animate('#skeleton .head',  'rock_s_head 1.5s 166 ease-in-out');
+  animate('#zombie .head',    'rock_z_head 1.5s 166 ease-in-out');
+  animate('#frank .body',     'rock_f_body 1.5s 166 ease-in-out');
+  animate('#zombie .body',    'rock_z_body 1.5s 166 ease-in-out');
+  animate('#frank .rhand',    'rock_f_rhand 1.5s 166 ease-in-out');
+  animate('#frank .lhand',    'rock_f_lhand 1.5s 166 ease-in-out');
+  animate('#zombie .rhand',    'rock_z_rhand 1.5s 166 ease-in-out');
+  animate('#zombie .lhand',    'rock_z_lhand 1.5s 166 ease-in-out');
+  animate('#zombie .guitar',    'rock_z_guitar 1.5s 166 ease-in-out');
+  animate('#frank .guitar',    'rock_f_guitar 1.5s 166 ease-in-out');
+  
+};
+
+
+
 function init(){
   // ------------- делаем все эл-ты draggable---- ---------------
   $(".head, .lhand, .body, .rhand, .lfoot, .rfoot").draggable({		// будут перемещаемыми
@@ -31,8 +92,8 @@ function init(){
   // ------------- droppable параметры головы скелета -----------
   $("#skeleton .head").droppable({
     accept: '.head',				// будет принимать только те элементы, которые подходят по селектору
-    activeClass: 'active',	// будет применен к целевому элементу в момент начала перемещения
-    hoverClass: 'hover',		// будет применен к целевому элементу в момент, когда перемещаемый элемент окажется над целевым элементом
+    activeClass: 'active_head',	// будет применен к целевому элементу в момент начала перемещения
+    hoverClass: 'hover_pulse',		// будет применен к целевому элементу в момент, когда перемещаемый элемент окажется над целевым элементом
     drop: function(){	
       $('#res1').text($('#res1').text() + " Head: +1 ");  // $(this) - drop, $(ui.draggable) - drag
     },
@@ -55,6 +116,13 @@ function init(){
       $('#res1').text($('#res1').text() + " Head: -1 ");
     },
   });
+  // части тела скелета будут связаны с частями тела Френка и Зомби
+  $("#skeleton .body").droppable({ accept: '.body', activeClass: 'hover_pulse'});
+  $("#skeleton .rhand").droppable({ accept: '.rhand', activeClass: 'hover_pulse'});
+  $("#skeleton .lhand").droppable({ accept: '.lhand', activeClass: 'hover_pulse'});
+  $("#skeleton .rfoot").droppable({ accept: '.rfoot', activeClass: 'hover_pulse'});
+  $("#skeleton .lfoot").droppable({ accept: '.lfoot', activeClass: 'hover_pulse'});
+  
   // ------------- делаем головы прилипающими к другим частям тела --------
   $(".head").draggable({
     snap: true
@@ -63,9 +131,26 @@ function init(){
   $("#zombie .head").draggable("destroy");  	// удаляет всю функциональность плагина Draggable. 
   // ------------- весь зомби будет тянуться за голову  ----------- 
   $("#zombie").draggable({
-    handle: ".head"  			// определяет, за какой элемент внутри данного осуществляется перетаскивание. 
+    handle: ".head",  			// определяет, за какой элемент внутри данного осуществляется перетаскивание. 
+    drag : function(event, ui) {  // немного анимации
+      $("#zombie .head").css("-webkit-animation", "head_jump 2.3s infinite ease-in-out");
+      $("#zombie .body").css("-webkit-animation", "body_dance 2.3s infinite ease-in-out");
+      $("#zombie .rhand").css("-webkit-animation", "rhand_dance 2.3s infinite ease-in-out");
+      $("#zombie .lhand").css("-webkit-animation", "lhand_dance 2.3s infinite ease-in-out");
+      $("#zombie .rfoot").css("-webkit-animation", "rfoot_dance 2.3s infinite ease-in-out");
+      $("#zombie .lfoot").css("-webkit-animation", "lfoot_dance 2.3s infinite ease-in-out");
+    },
+    stop : function(event, ui) {  // убираем анимацию
+      $("#zombie .head").css("-webkit-animation", "");
+      $("#zombie .body").css("-webkit-animation", "");
+      $("#zombie .rhand").css("-webkit-animation", "");
+      $("#zombie .lhand").css("-webkit-animation", "");
+      $("#zombie .rfoot").css("-webkit-animation", "");
+      $("#zombie .lfoot").css("-webkit-animation", "");
+    }
   });
   
+ 
   $(".head, .lhand, .body, .rhand, .lfoot, .rfoot").css('position', 'absolute');	// cmall bug fix for chrome :)
   
 }
