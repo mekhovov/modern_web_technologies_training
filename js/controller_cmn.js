@@ -8,7 +8,7 @@
 * 
 ****************************/
 
-function show_menu (menu_id, table) {
+function show_menu (menu_id, action) {
 	// show / hide / set active elements
   $("article,aside").hide();
   $(".curr_menu").removeClass("curr_menu");
@@ -32,6 +32,16 @@ function show_menu (menu_id, table) {
     case "all_tags": 						// TODO: get news by tag
       modelTags.getAll();
       break;
+    case "skeleton":
+      switch(action) {
+        case "lets_rock":
+          lets_rock ();
+          break;
+        default:
+          drag_n_drop ();
+      }
+      break;
+      
   }
 }
 

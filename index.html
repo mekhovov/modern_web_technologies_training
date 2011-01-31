@@ -16,6 +16,7 @@
 		<script src="js/view_news.js"></script>
     <script src="js/db_cmn.js"></script>
 		<script src="js/drag_and_drop.js"></script> 
+		<script src="js/lets_rock.js"></script> 
   	<script src="js/controller_cmn.js"></script> 
   	
     <link rel="stylesheet" href="css/common.css"> 
@@ -47,10 +48,10 @@
 			<header>
         <hgroup>
           <span class="h1">Presentation of </span>
-          <span class="h2">HTML5</span><span class="h0">, </span>
-          <span class="h2">CSS3</span><span class="h0">, </span>
-          <span class="h2">JS</span><span class="h0">, </span>
-          <span class="h2">jQuery</span><span class="h0">.</span>
+          <span class="h2">HTML5, </span>
+          <span class="h2">CSS3, </span>
+          <span class="h2">JS, </span>
+          <span class="h2">jQuery.</span>
         </hgroup>
 			</header>
     	<div class="line_down"></div>
@@ -73,7 +74,8 @@
     <aside class="article_skeleton">
       <div>
         <ul>
-          <li ><div class="aside_skeleton" ><span class="h4">* It`s SKELETON page </span></div></li>
+          <li ><div class="aside_skeleton" onclick="show_menu('skeleton', 'drag_n_drop');"><span class="h4">* Drop Me</span></div></li>
+          <li ><div class="aside_lets_rock" onclick="show_menu('skeleton', 'lets_rock');"><span class="h4">* Let`s Rock</span></div></li>
         </ul>
       </div>
     </aside>          
@@ -102,7 +104,7 @@
       <!--  Article skeleton page -->	
   		<article class="article_skeleton">
         <header class="title">
-          <h3> Drag and Drop demonstration </h3>
+          <h3> Drag`n`Drop and CSS3 animate demonstration </h3>
         </header>
         <!--  Container gor Skeleton, Frank and Zombie -->	
 				<div id="skeletons_container">
@@ -123,7 +125,6 @@
 	      </div>
 	      
 	      <div id="lets_rock">
-	        <div class="h0" onclick="lets_rock();">Let`s ROCK !</div>
   	      <div id="rock_mp3"> </div>
          </div>
 
