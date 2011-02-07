@@ -4,7 +4,6 @@ goog.addDependency("../controllers/cmn.js", [], ['db.dbHW', 'controller.show_men
 goog.addDependency("../controllers/drag_and_drop.js", ['controller.drag_n_drop'], ['controller.lets_rock']);
 goog.addDependency("../controllers/lets_rock.js", ['controller.lets_rock', 'controller.nimate', 'controller.stop_lets_rock'], []);
 goog.addDependency("../controllers/menu.js", ['controller.show_menu'], ['model.modelNews', 'controller.drag_n_drop', 'controller.lets_rock', 'view.view']);
-goog.addDependency("backbone.js", [], []);
 goog.addDependency("base.js", [], []);
 goog.addDependency("base_ex.js", [], []);
 goog.addDependency("deps.js", [], []);

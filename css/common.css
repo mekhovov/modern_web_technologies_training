@@ -181,6 +181,7 @@ nav ul li div:hover {
 }
 .title em {
 	display:none;
+	text-decoration:none;
 }
 
 .title:hover em{
@@ -203,6 +204,9 @@ nav ul li div:hover {
 	
 }
 
+nav a:hover {
+	text-decoration:none;
+}
 
 article{
 	/* Applying CSS3 rounded corners: */
@@ -363,6 +367,7 @@ article .line{
 
 #content{
     margin-left:280px;
+    color: white;
 }
 	
 article{
@@ -1145,11 +1150,7 @@ margin:0 0 0 30px;
 
 }
 
-/*
-1%  {	left:355px;  top:200px;  -webkit-transform: scale(1.13) rotate(43deg) rotateX(-53deg) skew(25deg); -webkit-transform-origin: 30% 0% 0%;}
 
-50%  {	left:235px;  top:200px;	  -webkit-transform: scale(1.13) rotate(-43deg) rotateX(53deg) skew(-25deg); -webkit-transform-origin: 30% 0% 0%;}
-*/
 @-webkit-keyframes rock_s_rhand {
   0%    {	left:360px;  top:170px; }
   5%    {	left:355px;  top:200px; -webkit-transform: rotate(43deg);}
@@ -1437,5 +1438,56 @@ margin:0 0 0 30px;
   100%  {	opacity: 1; }
 }
 
+
+
+/* ************** not used yet **************************
+
+@-webkit-keyframes rock_s_rhand_up {
+  0%    {	left:360px;  top:170px; -webkit-transform: rotate(0deg); }
+  20%   {	left:360px;  top:170px; -webkit-transform: rotate(0deg); }
+  30%   {	left:330px;  top:140px; -webkit-transform: rotate(-66deg);}
+  40%   {	left:360px;  top:170px; -webkit-transform: rotate(0deg); }
+  50%   {	left:330px;  top:140px; -webkit-transform: rotate(-66deg);}
+  60%   {	left:360px;  top:170px; -webkit-transform: rotate(0deg); }
+  100%  {	left:360px;  top:170px; -webkit-transform: rotate(0deg);}
+}
+
+@-webkit-keyframes rock_s_lhand_up {
+  0%    {	left:230px;  top:170px; -webkit-transform: rotate(0deg); }
+  20%   {	left:230px;  top:170px; -webkit-transform: rotate(0deg); }
+  30%   {	left:260px;  top:140px; -webkit-transform: rotate(66deg);}
+  40%   {	left:230px;  top:170px; -webkit-transform: rotate(0deg); }
+  50%   {	left:260px;  top:140px; -webkit-transform: rotate(66deg);}
+  60%   {	left:230px;  top:170px; -webkit-transform: rotate(0deg); }
+  100%  {	left:230px;  top:170px; -webkit-transform: rotate(0deg);}
+}
+
+
+
+@-webkit-keyframes rock_s_rfoot_up {
+  0%    {	left:180px;  top:155px; -webkit-transform: rotate(-83deg); -webkit-transform-origin: 100% 0%}
+  20%   {	left:180px;  top:155px; -webkit-transform: rotate(-83deg); -webkit-transform-origin: 100% 0%}
+  25%   {	left:280px;  top:115px; -webkit-transform: rotate(125deg); -webkit-transform-origin: 100% 50% }
+  30%   {	left:280px;  top:115px; -webkit-transform: rotate(-125deg); -webkit-transform-origin: 50% 0% }
+  40%   {	left:180px;  top:155px; -webkit-transform: rotate(-83deg); -webkit-transform-origin: 100% 0%}
+  45%   {	left:280px;  top:115px; -webkit-transform: rotate(125deg); -webkit-transform-origin: 100% 50% }
+  50%   {	left:280px;  top:115px; -webkit-transform: rotate(-125deg); -webkit-transform-origin: 50% 0% }
+  60%  {	left:180px;  top:155px; -webkit-transform: rotate(-83deg); -webkit-transform-origin: 100% 0%}
+  100%  {	left:180px;  top:155px; -webkit-transform: rotate(-83deg); -webkit-transform-origin: 100% 0%}
+}
+
+@-webkit-keyframes rock_s_lfoot_up {
+  0%    {	left:415px;  top:185px; -webkit-transform: rotate(83deg); -webkit-transform-origin: 50% 0% }
+  20%   {	left:415px;  top:185px; -webkit-transform: rotate(83deg); -webkit-transform-origin: 50% 0% }
+  25%   {	left:310px;  top:135px; -webkit-transform: rotate(-125deg); -webkit-transform-origin: 100% 50% }
+  30%   {	left:310px;  top:135px; -webkit-transform: rotate(125deg); -webkit-transform-origin: 100% 0% }
+  40%   {	left:415px;  top:185px; -webkit-transform: rotate(83deg); -webkit-transform-origin:  50% 0%}
+  45%   {	left:310px;  top:135px; -webkit-transform: rotate(-125deg); -webkit-transform-origin: 100% 50% }
+  50%   {	left:310px;  top:135px; -webkit-transform: rotate(125deg); -webkit-transform-origin:  100% 0% }  
+  60%  {	left:415px;  top:185px; -webkit-transform: rotate(83deg); -webkit-transform-origin: 50% 0% }
+  100%  {	left:415px;  top:185px; -webkit-transform: rotate(83deg); -webkit-transform-origin: 50% 0% } 
+}
+
+************** not used yet ************************** */
 
 

@@ -14,9 +14,13 @@ goog.provideAll (['controller.lets_rock', 'controller.nimate', 'controller.stop_
 function animate(element, anim)
 {
   $(element).css({'-webkit-animation' : ''});
-  window.setTimeout(function() {
-    $(element).delay(2000).css({'-webkit-animation' : anim});
-  }, 0  );
+  var anim_opt = anim.split(" ");
+  $(element).css({'-webkit-animation-name' : anim_opt[0]});
+  $(element).css({'-webkit-animation-delay' : anim_opt[1]});
+  $(element).css({'-webkit-animation-duration' : anim_opt[2]});
+  $(element).css({'-webkit-animation-iteration-count' : anim_opt[3]});
+  $(element).css({'-webkit-animation-timing-function' : anim_opt[4]});
+
 };
 
 function lets_rock (){
@@ -50,22 +54,26 @@ function lets_rock (){
   $("#frank .rfoot").css({'left' : '115px', 'top' :  '155px'});
   $("#frank .lfoot").css({'left' : '60px', 'top' : '155px'});
   
-  animate('#skeleton .rhand', 'rock_s_rhand 3s 83 ease-in-out');
-  animate('#skeleton .lhand', 'rock_s_lhand 3s 83 ease-in-out');
-  animate('#skeleton .rfoot', 'rock_s_rfoot 3s 83 ease-in-out');
-  animate('#skeleton .lfoot', 'rock_s_lfoot 3s 83 ease-in-out');
-  animate('#frank .head',     'rock_f_head 1.5s 166 ease-in-out');
-  animate('#skeleton .head',  'rock_s_head 1.5s 166 ease-in-out');
-  animate('#zombie .head',    'rock_z_head 1.5s 166 ease-in-out');
-  animate('#frank .body',     'rock_f_body 1.5s 166 ease-in-out');
-  animate('#zombie .body',    'rock_z_body 1.5s 166 ease-in-out');
-  animate('#frank .rhand',    'rock_f_rhand 1.5s 166 ease-in-out');
-  animate('#frank .lhand',    'rock_f_lhand 1.5s 166 ease-in-out');
-  animate('#zombie .rhand',    'rock_z_rhand 1.5s 166 ease-in-out');
-  animate('#zombie .lhand',    'rock_z_lhand 1.5s 166 ease-in-out');
-  animate('#zombie .guitar',    'rock_z_guitar 1.5s 166 ease-in-out');
-  animate('#frank .guitar',    'rock_f_guitar 1.5s 166 ease-in-out');
-  animate('#zombie, #frank, #skeleton, article.article_skeleton',    'rock_fadein 3s 1 ease-in-out');
+  
+  animate('#frank .head',     'rock_f_head 0s 1.5s 166 ease-in-out');
+  animate('#skeleton .rhand', 'rock_s_rhand 0s 3s 83 ease-in-out');
+  animate('#skeleton .lhand', 'rock_s_lhand 0s 3s 83 ease-in-out');
+  animate('#skeleton .rfoot', 'rock_s_rfoot 0s 3s 83 ease-in-out');
+  animate('#skeleton .lfoot', 'rock_s_lfoot 0s 3s 83 ease-in-out');
+    
+  animate('#skeleton .head',  'rock_s_head 0s 1.5s 166 ease-in-out');
+  animate('#frank .body',     'rock_f_body 0s 1.5s 166 ease-in-out');
+  animate('#frank .rhand',    'rock_f_rhand 0s 1.5s 166 ease-in-out');
+  animate('#frank .lhand',    'rock_f_lhand 0s 1.5s 166 ease-in-out');
+  animate('#frank .guitar',   'rock_f_guitar 0s 1.5s 166 ease-in-out');
+  
+  animate('#zombie .head',    'rock_z_head 13.5s 1.5s 153 ease-in-out');
+  animate('#zombie .body',    'rock_z_body 13.5s 1.5s 153 ease-in-out');
+  animate('#zombie .rhand',   'rock_z_rhand 13.5s 1.5s 153 ease-in-out');
+  animate('#zombie .lhand',   'rock_z_lhand 13.5s 1.5s 153 ease-in-out');
+  animate('#zombie .guitar',  'rock_z_guitar 13.5s 1.5s 153 ease-in-out');
+    
+  animate('#zombie, #frank, #skeleton, article.article_skeleton',    'rock_fadein 0s 3s 1 ease-in-out');
 };
 
 function stop_lets_rock (){

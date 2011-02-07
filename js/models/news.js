@@ -36,12 +36,12 @@ var modelNews = {
 	},
 	
 	// add news to DB
-	addNews: function () {
+	addNews: function (jsonAddNewNews) {
 		var values = {};
 		$.each($('#form_add_news').serializeArray(), function(i, field) {
       values[field.name] = field.value;
   	});
-		var jsonAddNewNews = {
+		jsonAddNewNews = jsonAddNewNews || {
       "addRow" :
         [
           { "table" : this.table, "values": 

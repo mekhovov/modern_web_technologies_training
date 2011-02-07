@@ -1,0 +1,123 @@
+<!-- Do NOT put any DOCTYPE here unless you want problems in IEs. -->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Ext.js - Desktop Sample App</title>
+
+    <meta charset="UTF-8"> 
+    
+    <!-- extjs is a javascript framework you can use to create professional graphical web user interface and AJAX web application -->
+    
+    <!-- This must come BEFORE javascript includes! -->
+    <!-- Own css styles -->
+		<link rel="stylesheet" href="css/common.css"> 
+    <!-- Ext.js css styles -->
+		<link rel="stylesheet" href="extjs/css/ext-all.css" />
+    <link rel="stylesheet" href="extjs/css/desktop.css" />
+    <!-- Theme includes -->
+    <link rel="stylesheet" itle="gray"       href="extjs/css/xtheme-gray.css" />
+    <link rel="stylesheet" title="access"    href="extjs/css/xtheme-access.css" />
+    <link rel="stylesheet" title="2brave"    href="extjs/css/xtheme-2brave.css" />
+    <link rel="stylesheet" title="winglass"  href="extjs/css/xtheme-winglass.css" />
+    <link rel="stylesheet" title="win7"      href="extjs/css/xtheme-win7.css" />
+    
+    <!-- jQuery -->
+		<script src="js/core/jquery.js"></script>
+    <script src="js/core/jquery-ui.js"></script>
+    <!-- Ext.js Core -->
+    <!-- First of javascript includes must be an adapter -->
+    <script src="extjs/js/ext-jquery-adapter.js"></script>    <!-- You can use ext-base.js -->
+    <!-- ...then you need the Ext itself, either debug or production 'ext-all.js' version. -->
+    <script src="extjs/js/ext-all-debug.js"></script>
+    <!-- Ext.js common desktop UI -->
+		<script src="extjs/js/StartMenu.js"></script>
+		<script src="extjs/js/TaskBar.js"></script>
+		<script src="extjs/js/Desktop.js"></script>
+		<script src="extjs/js/App.js"></script>
+		<script src="extjs/js/Module.js"></script>
+    <!-- Ext.js desktop config -->
+		<script src="extjs/js/sample.js"></script>
+		<!-- Ext.js demo -->
+    <script src="extjs/js/styleswitcher.js"></script>
+		<script src="extjs/js/extjs_demo.js"></script>
+		<!-- Own JavaScripts -->
+		<script src="js/core/base.js"></script>
+    <script src="js/core/base_ex.js"></script>
+    <script src="js/core/underscore-min.js"></script>
+		<script src="js/core/backbone.js"></script>
+    <script src="js/controllers/cmn.js"></script>
+		
+</head>
+<body scroll="no">
+
+<!-- Ext.js desktop -->
+<div id="x-desktop">
+    
+	<section>
+		<!--  Header menu -->
+    <div id="header">
+	    <header>
+		    <nav>
+  		    <ul>
+  	  		  <li><a href="index.html"><div class="title menu_home"><img src="images/ico-home.png" /><em>Home</em></div></a></li>
+      	    <li><a href="index.html"><div class="title article_all_news menu_all_news menu_add_news menu_html_news menu_css_news menu_other_news" onclick="show_menu('all_news', 'all_news');"><img src="images/ico-news.png" /><em>News</em></div></a></li>
+  					<li><a href="index.html"><div class="title menu_skeleton" onclick="show_menu('skeleton');"><img src="images/ico-skeleton.png" /><em>Skeleton</em></div></a></li>
+  					<li><a href="extjs_demo.html"><div class="title menu_extjs" ><img src="images/ico-extjs.png" /><em>Ext&nbsp;js</em></div></a></li>
+
+    			</ul>
+  			</nav>
+		  </header>
+
+	  </div>
+	  
+         <form id="styleswitcher">
+            <label for="styleswitcher_select">Choose Theme: </label>
+            <select name="styleswitcher_select" id="styleswitcher_select">
+                <option value="win7" selected="true" >Win7</option>
+                <option value="2brave">Ukraine 4ever</option>
+                <option value="gray">Gray</option>
+                <option value="access">Accessibility</option>
+                <option value="winglass">Win Glass</option>
+            </select>
+        </form>
+  </section>
+	
+  <!-- Ext.js Shortcuts -->
+  <dl id="x-shortcuts">
+ 
+    <!-- Ext.js test demo -->
+    <dt id="showNews_win">
+    	 <a href="#" onclick="showNews_win();" ><img src="images/ico-news.png" /><div>Show News</div></a>
+    </dt>
+    <dt id="addNews_win">
+    	 <a href="#" onclick="addNews_win();" ><img src="images/ico-add_it.png" /><div>Add News</div></a>
+    </dt>
+    <dt id="dragndrop_win">
+    	 <a href="#" onclick="dragNdrop_win();" ><img src="images/ico-skeleton.png" /><div>Drag Me</div></a>
+    </dt>
+    <dt id="letsRock_win">
+    	 <a href="#" onclick="letsRock_win();" ><img src="images/ico-lets_rock.png" /><div>Let`s Rock</div></a>
+    </dt>
+    <dt id="msgbox-demo">
+    	 <a href="#" onclick="msgbox_demo();" ><img src="extjs/images/ico_msgbox.png" /><div>Msgbox Demo</div></a>
+    </dt>
+    <dt id="grid-win-shortcut">
+      <a href="#"><img src="extjs/images/s.gif" /><div>Grid Window</div></a>
+    </dt>
+    <dt id="acc-win-shortcut">
+      <a href="#"><img src="extjs/images/s.gif" /><div>Accordion Window</div></a>
+    </dt>
+  </dl>
+
+</div>
+
+<!-- Ext.js taskbar -->
+<div id="ux-taskbar">
+	<div id="ux-taskbar-start"></div>
+	<div id="ux-taskbuttons-panel"></div>
+	<div class="x-clear"></div>
+</div>	
+
+
+</body>
+</html>

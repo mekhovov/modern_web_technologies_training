@@ -12,6 +12,7 @@ goog.requireAll (['controller.lets_rock']);
 
 function drag_n_drop () {
   stop_lets_rock ();
+  view.dragNdropInit();
   // ------------- ������ ��� ��-�� draggable---- ---------------
   $(".head, .lhand, .body, .rhand, .lfoot, .rfoot").draggable({		// ����� �������������
     cursor: 'move',					// ��� ������� ��� ��������������
