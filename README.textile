@@ -1,0 +1,17 @@
+h1. Modern Web Technologies Training
+
+It`s training projects of WebUI coursers in "SoftServe":http://softserve.ua IT company.
+
+Using technologies / plugins / libraries:
+* HTML5
+* CSS3
+* JavaScript
+* jQuery
+* jQuery Drag`n`Drop
+* CSS3 animation
+* LocalStorage
+* Google Closure library (base.js)
+* Ext.js
+* backbone.js
+* underscore.js
+
