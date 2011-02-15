@@ -24,6 +24,8 @@ function animate(element, anim)
 };
 
 function lets_rock (){
+	
+	show_menu('lets_rock');
 
   $("#lets_rock audio").remove();
   $("#lets_rock").append('<audio autoplay controls >  <source src="audio/StoneSour-30-30-150.mp3"> </audio>').fadeIn();

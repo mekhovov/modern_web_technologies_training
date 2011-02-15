@@ -8,9 +8,12 @@
 ****************************/
 
 goog.provideAll (['controller.drag_n_drop']);
-goog.requireAll (['controller.lets_rock']);
+goog.requireAll (['controller.lets_rock', 'view.view']);
 
 function drag_n_drop () {
+	
+	show_menu('skeleton');
+	
   stop_lets_rock ();
   view.dragNdropInit();
   // ------------- ������ ��� ��-�� draggable---- ---------------

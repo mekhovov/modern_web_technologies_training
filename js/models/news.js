@@ -13,9 +13,9 @@
 ****************************/
 
 goog.provideAll (['model.modelNews']);
-goog.requireAll (['view.viewNews', 'db.dbHW']);
+goog.requireAll (['view.viewNews']);
 
-var modelNews = {
+var ModelNews = Backbone.Model.extend({
 	table: 'news',	// table name
 	// get all news (with limit and offset if needed)
 	getAll: function (limit, offset) {
@@ -31,6 +31,7 @@ var modelNews = {
           content: result.rows.item(i).content
         } );
     	}
+    	sessionStorage.news = result;
     	viewNews.show(arrObjects ,limit, limit+offset );	// show news
 		});
 	},
@@ -56,7 +57,9 @@ var modelNews = {
         ]
      };
     dbHW.insertRows(jsonAddNewNews);
-		show_menu('all_news', 'all_news');	// show news
+		if (window.newsController) { 
+			window.newsController.index();
+		}
 	},
 	
   // get news by ID
@@ -84,14 +87,15 @@ var modelNews = {
 	// get count from DB
   count: function () {
     dbHW.selectCount(this.table, false, function(result){
-		  viewNews.showCount (result.rows.item(0)['COUNT(*)']);		//  set value to div 
+    	sessionStorage.removeItem("news_count");
+	sessionStorage.news_count = result.rows.item(0)['COUNT(*)'];
 	  });
   },
 	
   // delete news by ID
   deleteOne: function (news_id) {
     dbHW.deleteWhere( this.table, "id == " + news_id);
-    show_menu('all_news', 'all_news');	// show news
+    window.newsController.index();
 	},
 	
 	// edit news
@@ -112,7 +116,7 @@ var modelNews = {
         content: result.rows.item(i).content
       }
     }
-    view.showFormEditNews(news);	// show edit news form
+    viewNews.showEditNewsForm (news);	// show edit news form
 		});
 	},
 	
@@ -136,6 +140,6 @@ var modelNews = {
 		    } ]
     };
     dbHW.updateRows(jsonUpRow, "id = " + news_id);
-    show_menu('all_news', 'all_news');	// show news
+    window.newsController.index();
   }
 };
