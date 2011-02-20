@@ -142,4 +142,4 @@ var ModelNews = Backbone.Model.extend({
     dbHW.updateRows(jsonUpRow, "id = " + news_id);
     window.newsController.index();
   }
-};
+})

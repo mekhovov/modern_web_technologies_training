@@ -369,6 +369,10 @@ article .line{
     margin-left:280px;
     color: white;
 }
+
+#content article ul{
+    margin-left:40px;
+}
 	
 article{
 	background:url("../images/20p-black.png") repeat;
@@ -512,11 +516,11 @@ article header a:hover {
     width:15px;
 }
 
-.read_it, .edit_it:hover, .edit_news:hover, .delete_it:hover, .add_it:hover{
+.read_it:hover, .edit_it:hover, .edit_news:hover, .delete_it:hover, .add_it:hover{
     cursor:pointer;
     opacity:0.5;
-  -moz-opacity: 0.5;
-  filter:alpha(opacity=50);
+    -moz-opacity: 0.5;
+    filter:alpha(opacity=50);
 }
 
 .read_it:hover {
@@ -687,6 +691,11 @@ aside ul li div span:hover {
     cursor: pointer;
     color: #a39ffd  ;
 }
+
+aside ul li a:hover {
+	text-decoration:none;
+}
+
 
 article.article_add_news, article.article_edit_news {
 	width: 600px;

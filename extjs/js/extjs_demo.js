@@ -61,7 +61,7 @@ function showNewsWindow(news_count){
     })      
   }
   news_count = news_count || 2;
-  modelNews.getAll(news_count, 0);
+  window.newsModel.getAll(news_count, 0);
   win.show();
 }
 
@@ -131,7 +131,7 @@ function addNews_win(){
           jsonAddNewNews = {
             "addRow" :
               [
-                { "table" : modelNews.table, "values": 
+                { "table" : window.newsModel.table, "values": 
                   [
                     { "name" : "title",   "value": Ext.getCmp('title').getValue() },
                     { "name" : "author",  "value": Ext.getCmp('author').getValue() },
@@ -147,7 +147,7 @@ function addNews_win(){
           msg.minWidth = 300; 
           msg.alert('News added: ', Ext.getCmp('title').getValue() , 
             function(){
-              modelNews.addNews(jsonAddNewNews);
+              window.newsModel.addNews(jsonAddNewNews);
               
               var win = new Ext.Window({
                 width:700,
@@ -188,7 +188,8 @@ function addNews_win(){
 
 // show news in windows
 function showNews_win(){
-  dbHW.selectAll(modelNews.table, true, false, false, function(result){
+	
+  dbHW.selectAll(window.newsModel.table, true, false, false, function(result){
     var news = new Array();
     for(var i=0;i<result.rows.length;i++){
       news.push( {

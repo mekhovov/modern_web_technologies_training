@@ -9,7 +9,7 @@
 *
 ****************************/
 
-goog.provideAll (['controller.lets_rock', 'controller.nimate', 'controller.stop_lets_rock']);
+goog.provideAll (['controller.lets_rock', 'controller.animate', 'controller.stop_lets_rock']);
 
 function animate(element, anim)
 {

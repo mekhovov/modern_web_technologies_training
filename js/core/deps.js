@@ -2,7 +2,7 @@
 goog.addDependency("../cmn/cmn.js", ['cmn.getDateTime', 'cmn.cutText'], []);
 goog.addDependency("../controllers/cmn.js", [], ['controllers.Routes']);
 goog.addDependency("../controllers/drag_and_drop.js", ['controller.drag_n_drop'], ['controller.lets_rock', 'view.view']);
-goog.addDependency("../controllers/lets_rock.js", ['controller.lets_rock', 'controller.nimate', 'controller.stop_lets_rock'], []);
+goog.addDependency("../controllers/lets_rock.js", ['controller.lets_rock', 'controller.animate', 'controller.stop_lets_rock'], []);
 goog.addDependency("../controllers/menu.js", ['controller.show_menu'], []);
 goog.addDependency("../controllers/news.js", ['controllers.News'], ['db.dbHW', 'model.modelNews', 'controller.show_menu', 'view.viewNews']);
 goog.addDependency("../controllers/routes.js", ['controllers.Routes'], ['controllers.News', 'controller.drag_n_drop', 'controller.lets_rock']);
@@ -12,7 +12,6 @@ goog.addDependency("base_ex.js", [], []);
 goog.addDependency("deps.js", [], []);
 goog.addDependency("jquery-ui.js", [], []);
 goog.addDependency("jquery.js", [], []);
-goog.addDependency("underscore-min.js", [], []);
 goog.addDependency("underscore.js", [], []);
 goog.addDependency("../db/cmn.js", ['db.dbHW'], ['db.jsonTables', 'db.jsonAddCategories', 'db.jsonAddTags', 'db.jsonAddNews', 'db.jsonAddTags2News']);
 goog.addDependency("../db/migrate.js", ['db.jsonAddCategories', 'db.jsonAddTags', 'db.jsonAddNews', 'db.jsonAddTags2News'], ['cmn.getDateTime']);
